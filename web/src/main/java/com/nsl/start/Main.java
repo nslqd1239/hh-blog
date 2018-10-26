@@ -1,14 +1,16 @@
-package com.nsl.web;
+package com.nsl.start;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
-@ImportResource({"classpath*:/spring.xml"})
-public class QqApplication {
+@ComponentScan("com.nsl.web")
+@ImportResource({"classpath*:/META-INF/spring/context.xml"})
+public class Main {
 
     public static void main(String[] args) {
-        SpringApplication.run(QqApplication.class, args);
+        SpringApplication.run(Main.class, args);
     }
 }
