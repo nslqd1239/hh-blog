@@ -1,4 +1,4 @@
-package com.nsl.web;
+package com.nsl.common.lang;
 
 import java.io.Serializable;
 
@@ -15,11 +15,11 @@ public final class Result<T> implements Serializable {
      * @return
      */
     public static <E> Result<E> failure(int code) {
-        return new Result<E>(code, null, null);
+        return new Result<>(code, null, null);
     }
 
     public static <E> Result<E> failure(int code, E data) {
-        return new Result<E>(code, null, data);
+        return new Result<>(code, null, data);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class Result<T> implements Serializable {
      * @return
      */
     public static <E> Result<E> failure(int code, String message, E data) {
-        return new Result<E>(code, message, data);
+        return new Result<>(code, message, data);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class Result<T> implements Serializable {
      * @return
      */
     public static <E> Result<E> failure(int code, String message) {
-        return new Result<E>(code, message, null);
+        return new Result<>(code, message, null);
     }
 
     @SuppressWarnings("unchecked")
@@ -56,7 +56,7 @@ public final class Result<T> implements Serializable {
      * @return
      */
     public static <E> Result<E> success(E data) {
-        return new Result<E>(Code.SUCCESS, null, data);
+        return new Result<>(Code.SUCCESS, null, data);
     }
 
     public Result() {

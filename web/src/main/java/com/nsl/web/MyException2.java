@@ -1,6 +1,7 @@
 package com.nsl.web;
 
 import com.alibaba.fastjson.JSON;
+import com.nsl.common.lang.Result;
 import org.springframework.http.MediaType;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
